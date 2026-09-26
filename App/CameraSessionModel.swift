@@ -51,6 +51,10 @@ final class CameraSessionModel {
 
   nonisolated private static func configure(_ session: AVCaptureSession) -> Bool {
     session.beginConfiguration()
+    // The camera session only keeps the Duo outer display active. Let the
+    // conversation model own AVAudioSession so capture cannot steal or change
+    // the microphone while speech recognition is running.
+    session.automaticallyConfiguresApplicationAudioSession = false
     session.sessionPreset = .high
     defer { session.commitConfiguration() }
 
