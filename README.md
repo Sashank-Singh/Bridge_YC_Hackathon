@@ -289,7 +289,7 @@ This project is open source. See LICENSE file for details.
 ## 👥 Contributors
 
 - **Sashank Singh** - Project Lead
-- **Kyle Macomber** - Core Architecture
+- **Alan Tan** - Core Architecture
 
 ---
 
